@@ -131,10 +131,14 @@ $('.id_input').on("propertychange change keyup paste input", function(){ // prop
 // 이메일 인증번호 전송
 $(".mail_check_button").click(function(){
 	var email = $(".mail_input").val(); // 입력한 이메일
+	var checkBox = $(".mail_check_input").val();
 	
 	$.ajax({
 		type : "GET",
-		url : "mailCheck?email=" + email
+		url : "mailCheck?email=" + email,
+		success:function(data){
+			console.log("data : " + data);
+		}
 	});	
 });
 
