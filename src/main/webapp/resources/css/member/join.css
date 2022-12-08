@@ -190,6 +190,13 @@
 	cursor: pointer;
 }
 
+.correct{
+	color:green;
+}
+.incorrect{
+	color:red;
+}
+
 /* 주소 영역 */
 .address_wrap {
 	width: 100%;
