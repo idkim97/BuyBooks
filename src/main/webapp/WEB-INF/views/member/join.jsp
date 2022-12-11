@@ -189,7 +189,7 @@ $(document).ready(function(){
         
         /* 최종 유효성 검사 */
         if(idCheck&&idckCheck&&pwCheck&&pwckCheck&&pwckcorCheck&&nameCheck&&mailCheck&&mailnumCheck&&addressCheck ){
-			$("#join_form").attr("action","/member/join");
+			$("#join_form").attr("action","/member/join"); // join_form에 action 속성을 추가하고 값은 /member/join으로 한다.
 			$("#join_form").submit();
  		}
         return false;
