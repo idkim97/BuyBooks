@@ -51,7 +51,7 @@
 		// alert("로그인 버튼 작동");
 		
 		/* 로그인 메서드 서버 요청 */
-		$("#login_form").attr("action","/member/login"); // login_form에 action 속성을 추가하고 값은 /member/login 으로한다.
+		$("#login_form").attr("action","/member/login.do"); // login_form에 action 속성을 추가하고 값은 /member/login 으로한다.
 		$("#login_form").submit();
 	});
 </script>
