@@ -8,13 +8,35 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/main.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 
 	<div class="wrapper">
 		<div class="wrap">
 			<div class="top_gnb_area">
-				<h1>gnb area</h1>
+				<ul class="list">
+					<!-- 로그인 했을경우 보이는 네비게이션 바 -->
+					<c:if test="${member == null}">
+						<li><a href="/member/login">로그인</a></li>
+						<li><a href="/member/join">회원가입</a></li>
+						<li>고객센터</li>
+					</c:if>
+					
+					<!-- 로그인을 하지 않았을 경우 보이는 네비게이션 바 -->
+					<c:if test="${member != null}">
+						<c:if test="${member.adminCk==1 }">
+							<li><a href="/admin/main">관리자 페이지</a></li>
+						</c:if>
+						<li><a id="gnb_logout_button">로그아웃</a></li>
+						<li>마이룸</li>
+						<li>장바구니</li>
+					</c:if>
+					
+				</ul>
 			</div>
 
 			<div class="top_area">
@@ -57,6 +79,23 @@
 		</div>
 
 	</div>
+	
+	<script>
+	
+	/*gnb_area 로그아웃 버튼 작동*/
+	$("#gnb_logout_button").click(function(){
+		// alert("버튼 작동");
+		$.ajax({
+			type:"POST",
+			url : "/member/logout.do",
+			success:function(data){
+				alert("로그아웃 성공");
+				document.location.reload(); // 현재 페이지가 새로고침 되도록 하는 코드
+			}
+		}) // ajax
+	});
+	
+	</script>
 
 </body>
 </html>
