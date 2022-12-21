@@ -162,6 +162,11 @@ ul{
     margin-left: 70px;
     margin-top : 30px;
 }
+
+.admin_navi_wrap li a:link {color: black;}
+.admin_navi_wrap li a:visited {color: black;}
+.admin_navi_wrap li a:active {color: black;}
+.admin_navi_wrap li a:hover {color: black;}
  
  
  
