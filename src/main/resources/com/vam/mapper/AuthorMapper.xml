@@ -2,13 +2,29 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.vam.mapper.AuthorMapper">
-  	<!-- 작가 등록 -->
-  		<insert id="authorEnroll">
-  		
-  			insert into vam_author(authorName, nationId, authorIntro) values(#{authorName},#{nationId},#{authorIntro})
-  		
-  		</insert>
-      
-      
-  </mapper>
+<mapper namespace="com.vam.mapper.AuthorMapper">
+	<!-- 작가 등록 -->
+	<insert id="authorEnroll">
+
+		insert into vam_author(authorName, nationId, authorIntro) values(#{authorName},#{nationId},#{authorIntro})
+
+	</insert>
+	
+	
+	<!-- 작가 목록 -->
+	<select id="authorGetList" resultType = "com.vam.model.AuthorVO">
+	
+		select authorId, authorname, nationId, regdate, updatedate from vam_author
+		<if test="keyword !=null">
+			where authorName like concat('%',#{keyword}, '%')
+		</if>
+		order by authorId desc
+		limit #{skip}, #{amount}
+	
+	</select>
+
+
+
+
+
+</mapper>
