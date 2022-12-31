@@ -13,6 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.vam.model.AuthorVO;
 import com.vam.model.Criteria;
+import com.vam.model.PageDTO;
 import com.vam.service.AuthorService;
 
 @Controller
@@ -58,6 +59,13 @@ public class AdminController {
 		List list = authorService.authorGetList(cri);
 		
 		model.addAttribute("list",list);
+		
+		/* 페이지 이동 인터페이스 데이터 */
+		int total = authorService.authorGetTotal(cri);
+		
+		PageDTO pageMaker = new PageDTO(cri, total);
+		
+		model.addAttribute("pageMaker", pageMaker);
 	}
 	
 	// 작가 등록 메소드
