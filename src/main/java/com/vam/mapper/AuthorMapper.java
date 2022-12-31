@@ -12,4 +12,7 @@ public interface AuthorMapper {
 	
 	// 작가 목록
 	public List<AuthorVO> authorGetList(Criteria cri);
+	
+	// 작가 총 수
+	public int authorGetTotal(Criteria cri);
 }
