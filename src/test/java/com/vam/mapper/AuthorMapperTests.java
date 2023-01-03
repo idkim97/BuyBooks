@@ -33,6 +33,7 @@ public class AuthorMapperTests {
 	}
 	*/
 	
+	/*
 	// 작가 목록 테스트
 	@Test
 	public void authorGetListTest() throws Exception{
@@ -44,5 +45,17 @@ public class AuthorMapperTests {
 		for(int i=0;i<list.size();i++) {
 			System.out.println("list" + i + "........." + list.get(i));
 		}
+	}
+	*/
+	
+	// 작가 총 수
+	@Test
+	public void authorGetTotalTest() throws Exception{
+		Criteria cri = new Criteria();
+		cri.setKeyword("난도");
+		
+		int total = mapper.authorGetTotal(cri);
+		
+		System.out.println("total..........." + total);
 	}
 }
