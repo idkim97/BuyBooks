@@ -15,7 +15,7 @@ public class AuthorServiceTests {
 	@Autowired
 	private AuthorService service;
 	
-	
+	/*
 	@Test
 	public void authorEnrollTest() throws Exception{
 		
@@ -27,5 +27,21 @@ public class AuthorServiceTests {
 		
 		service.authorEnroll(author);
 	}
+	*/
 	
+	
+	@Test
+	public void authorModifyTest() throws Exception{
+		AuthorVO author = new AuthorVO();
+		
+		author.setAuthorId(1);
+		System.out.println("수정전............" + service.authorGetDetail(author.getAuthorId()));
+		
+		author.setAuthorName("(service)수정");
+		author.setNationId("01");
+		author.setAuthorIntro("(service)소개 수정");
+		
+		service.authorModify(author);
+		System.out.println("수정후............" + service.authorGetDetail(author.getAuthorId()));
+	}
 }
