@@ -228,7 +228,67 @@ ul{
 .ck-content {						
     height: 170px;
 }
- 
+
+/* 캘린더 css 설정 */
+.ui-datepicker-trigger {						
+    margin-left: 25px;
+    width: 14%;
+    height: 38px;
+    font-weight: 600;
+    background-color: #dfe8f5;
+    font-size: 15px;
+    cursor:pointer;
+}
+input[name='publeYear'] {
+    width: 80%;
+    text-align: center;
+}
+
+/* 작가 선택 css 설정 */
+.authorId_btn {						
+    margin-left: 20px;
+    width: 14%;
+    height: 38px;
+    font-weight: 600;
+    background-color: #dfe8f5;
+    font-size: 15px;
+    cursor:pointer;
+}
+#authorName_input {
+    width: 80%;
+    text-align: center;
+}
+
+/* 카테고리 css 설정 */
+.form_section_content select {		
+    width: 92%;
+    height: 35px;
+    font-size: 20px;
+    text-align-last: center;
+    margin-left: 5px;
+}
+.cate_wrap span {
+    font-weight: 600;
+}
+.cate_wrap:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* 입력란 공란 경고 태그 */
+.ck_warn{						
+	display: none;
+    padding-top: 10px;
+    text-align: center;
+    color: #e05757;
+    font-weight: 300;    
+}
+
+/* 할인 가격 문구 */
+.step_val{						
+	display: block;
+    padding-top: 5px;
+    font-weight: 500;
+}
 /* float 속성 해제 */
 .clearfix{
     clear: both;
