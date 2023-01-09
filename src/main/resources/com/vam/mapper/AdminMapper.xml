@@ -13,6 +13,51 @@
 		#{publeYear},#{publisher},#{cateCode},#{bookPrice},#{bookStock},#{bookDiscount},#{bookIntro},#{bookContents})
 
 	</insert>
+	
+	
+	<!-- 카테고리 리스트 -->
+	<select id="cateList" resultType="com.vam.model.CateVO">
+	
+		select * from vam_bcate order by catecode
+	
+	</select>
+	
+	<!-- 상품 리스트 -->
+	<select id="goodsGetList" resultType="com.vam.model.BookVO">
+	
+		select  bookId, bookName,  b.authorName, c.cateName, bookStock, a.regDate
+		from vam_book a 
+		left outer join vam_author b on a.authorId = b.authorId
+		left outer join vam_bcate c on a.cateCode = c.cateCode
+		<if test="keyword != null">
+			where (bookName like concat ('%', #{keyword}, '%'))
+		</if>
+		order by bookId desc 
+		limit #{skip}, #{amount}		
+	
+	</select>
+  	
+  	<!-- 상품 총 갯수 -->
+  	<select id="goodsGetTotal" resultType="int">
+  	
+  		select count(*) from vam_book
+  		
+  		<if test="keyword != null">
+  		
+  			where bookName like concat('%' , #{keyword}, '%')
+  		
+  		</if>
+  	
+  	</select>
+  	
+  	<!-- 상품 조회 페이지 -->
+	<select id="goodsGetDetail" resultType="com.vam.model.BookVO">
+	
+		select bookId, bookName, (select authorName from vam_author where authorId =vam_book.authorId) authorName, 
+			authorId, publeYear, publisher, cateCode, bookPrice, bookStock, bookDiscount, bookIntro, bookContents, regDate, updateDate 
+		from vam_book where bookId = #{bookId}
+	
+	</select>
 
 
 </mapper>
