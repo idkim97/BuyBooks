@@ -70,11 +70,57 @@ public class AdminMapperTests {
 	}
 	*/
 	
+	/*
 	@Test
 	public void goodsGetDetailTest() {
 		int bookId = 14;
 		BookVO result = mapper.goodsGetDetail(bookId);
 		System.out.println("상품 조회 데이터 : " + result);
+	}
+	*/
+	
+	/*
+	// 상품 정보수정
+	@Test
+	public void goodsModifyTest() {
+		BookVO book = new BookVO();
+		
+		book.setBookId(20);
+		book.setBookName("mapper 테스트");
+		book.setAuthorId(94);
+		book.setPubleYear("2021-03-18");
+		book.setPublisher("출판사");
+		book.setCateCode("103002");
+		book.setBookPrice(20000);
+		book.setBookStock(300);
+		book.setBookDiscount(0.23);
+		book.setBookIntro("책 소개 ");
+		book.setBookContents("책 목차 ");
+		
+		mapper.goodsModify(book);
+	}
+	*/
+	
+	/*
+	// 상품 정보 삭제
+	@Test
+	public void goodsDeleteTest() {
+		int bookId = 14;
+		int result = mapper.goodsDelete(bookId);
+		if(result == 1) {
+			System.out.println("삭제 성공");
+		}
+	}
+	*/
+	
+	// 상품 정보 삭제
+	@Test
+	public void goodsDeleteTest() {
+		int authorId = 504;
+		int result = mapper.authorDelete(authorId);
+		if (result == 1) {
+			System.out.println("삭제 성공");
+		}
 	}
 	
 	
