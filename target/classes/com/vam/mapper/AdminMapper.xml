@@ -58,6 +58,29 @@
 		from vam_book where bookId = #{bookId}
 	
 	</select>
+	
+	<!-- 상품 정보 수정 -->
+	<update id="goodsModify">
+		
+		update vam_book set bookName = #{bookName}, authorId = #{authorId}, publeYear = #{publeYear}, publisher = #{publisher}, cateCode = ${cateCode}, 
+		bookPrice = #{bookPrice}, bookStock = #{bookStock}, bookDiscount = #{bookDiscount}, bookIntro = #{bookIntro}, bookContents = #{bookContents}, updateDate = now()
+		where bookId = ${bookId}
+	
+	</update>
+	
+	<!-- 상품 정보 삭제 -->
+	<delete id="goodsDelete">
+	
+		delete from vam_book where bookId=#{bookId}
+	
+	</delete>
+	
+	<!-- 작가 정보 삭제 -->
+	<delete id="authorDelete">
+	
+		delete from vam_author where authorId=#{authorId}
+	
+	</delete>
 
 
 </mapper>
