@@ -272,6 +272,13 @@ input[name='publeYear'] {
 	margin-top : 30px;
 }
 
+.delete_btn{
+	background-color: #efcdcd;
+}
+.delete_btn:hover{
+	background-color : #e4a7a7;
+}
+
 
 
 /* float 속성 해제 */
