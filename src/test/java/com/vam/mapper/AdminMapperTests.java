@@ -113,15 +113,7 @@ public class AdminMapperTests {
 	}
 	*/
 	
-	// 상품 정보 삭제
-	@Test
-	public void goodsDeleteTest() {
-		int authorId = 504;
-		int result = mapper.authorDelete(authorId);
-		if (result == 1) {
-			System.out.println("삭제 성공");
-		}
-	}
+	
 	
 	
 	
