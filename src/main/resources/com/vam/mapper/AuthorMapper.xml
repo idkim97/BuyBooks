@@ -50,7 +50,12 @@
 		update vam_author set authorName=#{authorName}, nationId=#{nationId}, authorIntro=#{authorIntro}, updatedate=now() where authorId=#{authorId}
 	</update>
 
-
+	<!-- 작가 정보 삭제 -->
+	<delete id="authorDelete">
+	
+		delete from vam_author where authorId=#{authorId}
+	
+	</delete>
 
 
 
