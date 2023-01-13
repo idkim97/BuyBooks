@@ -29,6 +29,5 @@ public interface AdminMapper {
 	// 상품 정보 삭제
 	public int goodsDelete(int bookId);
 	
-	// 작가 정보 삭제
-	public int authorDelete(int authorId);
+	
 }
