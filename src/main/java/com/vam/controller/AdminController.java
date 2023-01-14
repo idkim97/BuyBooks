@@ -1,5 +1,8 @@
 package com.vam.controller;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -239,6 +242,20 @@ public class AdminController {
 	public void uploadAjaxActionPOST(MultipartFile[] uploadFile) {
 		
 		logger.info("uploadAjaxActionPOST........");
+		String uploadFolder = "C:\\Users\\user\\Desktop\\Yeoun Su\\github\\ShoppingMall_Spring\\upload";
+		
+		/* 날짜 폴더 경로 */
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		String str = sdf.format(date);
+		String datePath = str.replace("-", File.separator);
+		
+		/* 폴더 생성 */
+		File uploadPath = new File(uploadFolder, datePath);
+		
+		if(uploadPath.exists() == false) {
+			uploadPath.mkdirs();
+		}
 		
 		// 향상된 for
 		for(MultipartFile multipartFile : uploadFile) {
