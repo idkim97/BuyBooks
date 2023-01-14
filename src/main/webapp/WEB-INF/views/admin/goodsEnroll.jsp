@@ -454,10 +454,16 @@
 	/* 이미지 업로드 */
 	$("input[type='file']").on("change",function(e){
 		
-		let formData = new formData();
+		let formData = new FormData();
 		let fileInput = $('input[name="uploadFile"]');
 		let fileList = fileInput[0].files;
 		let fileObj = fileList[0];
+		
+		console.log("fileList : " + fileList);
+		console.log("fileObj : " + fileObj);
+		console.log("fileName : " + fileObj.name);
+		console.log("fileSize : " + fileObj.size);
+		console.log("fileType(MimeType) : " + fileObj.type);
 		
 		if(!fileCheck(fileObj.name, fileObj.size)){
 			return false;
