@@ -15,7 +15,36 @@
 <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/classic/ckeditor.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
-</head>
+<style type="text/css">
+	#result_card img{
+		max-width: 100%;
+	    height: auto;
+	    display: block;
+	    padding: 5px;
+	    margin-top: 10px;
+	    margin: auto;	
+	}
+	#result_card {
+		position: relative;
+	}
+	.imgDeleteBtn{
+	    position: absolute;
+	    top: 0;
+	    right: 5%;
+	    background-color: #ef7d7d;
+	    color: wheat;
+	    font-weight: 900;
+	    width: 30px;
+	    height: 30px;
+	    border-radius: 50%;
+	    line-height: 26px;
+	    text-align: center;
+	    border: none;
+	    display: block;
+	    cursor: pointer;	
+	}
+	
+</style>
 </head>
 <body>
  <%@include file="../includes/admin/header.jsp"%>
@@ -142,6 +171,14 @@
                     			</div>
                     			<div class="form_section_content">
 									<input type="file" id ="fileItem" name='uploadFile' style="height: 30px multiple;">
+									<div id="uploadResult">
+										<!-- 
+										<div id="result_card">
+											<div class = "imgDeleteBtn">x</div>
+											<img src="/display?fileName=test.jpg">
+										</div>
+										-->
+									</div>
                     			</div>
                     		</div>  
                    		</form>
@@ -484,6 +521,7 @@
 			dataType : 'json',					// 서버로부터 반환받을 데이터 타입
 			success : function(result){
 				console.log(result);
+				showUploadImage(result);
 			},
 			error : function(result){
 				alert("이미지 파일이 아닙니다.");
@@ -508,6 +546,25 @@
 		
 		return true;
 		
+	}
+	
+	
+	/* 이미지 출력 */
+	function showUploadImage(uploadResultArr){
+		/* 전달받은 데이터 검증 */
+		if(!uploadResultArr || uploadResultArr.length == 0){return}
+		
+		let uploadResult = $("#uploadResult");
+		let obj = uploadResultArr[0];
+		let str = "";
+		let fileCallPath = encodeURIComponent(obj.uploadPath.replace(/\\/g, '/') + "/s_" + obj.uuid + "_" + obj.fileName);
+		
+		str += "<div id='result_card'>";
+		str += "<img src='/display?fileName=" + fileCallPath +"'>";
+		str += "<div class='imgDeleteBtn'>x</div>";
+		str += "</div>";
+		
+		uploadResult.append(str);
 	}
  </script>
  
