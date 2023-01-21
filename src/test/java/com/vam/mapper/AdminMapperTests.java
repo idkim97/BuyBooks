@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.vam.model.AttachImageVO;
 import com.vam.model.BookVO;
 import com.vam.model.Criteria;
 
@@ -113,6 +114,18 @@ public class AdminMapperTests {
 	}
 	*/
 	
+	/* 이미지 등록 */
+	@Test
+	public void imageEnrollTest() {
+		AttachImageVO vo = new AttachImageVO();
+		
+		vo.setBookId(18);
+		vo.setFileName("test");
+		vo.setUploadPath("test");
+		vo.setUuid("test2");
+		
+		mapper.imageEnroll(vo);
+	}
 	
 	
 	
