@@ -351,7 +351,7 @@ public class AdminController {
 	
 	
 		/* 이미지 파일 삭제 */
-		@PostMapping("deleteFile")
+		@PostMapping("/deleteFile")
 		public ResponseEntity<String> deleteFile(String fileName){
 			logger.info("deleteFile........." + fileName);
 			
@@ -359,7 +359,7 @@ public class AdminController {
 			
 			try {
 				
-				file = new File("C:\\Users\\user\\Desktop\\Yeoun Su\\github\\ShoppingMall_Spring\\upload" + URLDecoder.decode(fileName,"UTF-8"));
+				file = new File("C:\\Users\\user\\Desktop\\Yeoun Su\\github\\ShoppingMall_Spring\\upload\\" + URLDecoder.decode(fileName,"UTF-8"));
 				
 				file.delete();
 				
