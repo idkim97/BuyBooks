@@ -12,6 +12,16 @@
 	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	crossorigin="anonymous"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
+<style type="text/css">
+	#result_card img{
+		max-width: 100%;
+	    height: auto;
+	    display: block;
+	    padding: 5px;
+	    margin-top: 10px;
+	    margin: auto;	
+	}
+</style>
 </head>
 <body>
 	<%@include file="../includes/admin/header.jsp"%>
@@ -141,6 +151,16 @@
 				</div>
 				<div class="form_section_content bct">
 					<textarea name="bookContents" id="bookContents_textarea" disabled>${goodsInfo.bookContents}</textarea>
+				</div>
+			</div>
+
+			<div class="form_section">
+				<div class="form_section_title">
+					<label>상품 이미지</label>
+				</div>
+				<div class="form_section_content">
+
+					<div id="uploadResult"></div>
 				</div>
 			</div>
 
@@ -278,6 +298,15 @@
 					$(obj).attr("selected", "selected");
 				}
 			});	
+			
+			
+			/* 이미지 정보 호출 */
+			let bookId = '<c:out value="${goodsInfo.bookId}"/>';
+			let uploadResult = $("#uploadResult");
+			
+			$.getJSON("/getAttachList",{bookId : bookId}, function(arr){
+				
+			});
 			
 		}); // $(document).ready
 		
