@@ -68,14 +68,26 @@ public class AdminServiceImpl implements AdminService {
 		return adminMapper.goodsGetDetail(bookId);
 	}
 
-
+	// 상품 정보 수정
+	@Transactional
 	@Override
 	public int goodsModify(BookVO vo) {
-		log.info("goodsModify.........");
-		return adminMapper.goodsModify(vo);
+		int result = adminMapper.goodsModify(vo);
+
+		if (result == 1 && vo.getImageList() != null && vo.getImageList().size() > 0) {
+			adminMapper.deleteImageAll(vo.getBookId());
+
+			vo.getImageList().forEach(attach -> {
+
+				attach.setBookId(vo.getBookId());
+				adminMapper.imageEnroll(attach);
+			});
+		}
+
+		return result;
 	}
 
-
+	// 상품 정보 삭제
 	@Override
 	public int goodsDelete(int bookId) {
 		log.info("goodsDelete.........");
