@@ -89,6 +89,21 @@
 	</insert>
 	
 	
+	<!-- 지정 상품 이미지 전체 삭제 -->
+	<delete id="deleteImageAll">
+	
+		delete FROM vam_image where bookId = #{bookId}
+	
+	</delete>
+	
+	<!-- 어제자 날짜 이미지 리스트 -->
+	<select id="checkFileList" resultType="com.vam.model.AttachImageVO">
+	
+		select * from vam_image where uploadpath = DATE_FORMAT(DATE_ADD(NOW(), INTERVAL -1 DAY),'%Y\%m\%d')
+	
+	</select>
+	
+	
 
 
 </mapper>
