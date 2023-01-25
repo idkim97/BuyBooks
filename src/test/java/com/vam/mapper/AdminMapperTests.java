@@ -114,7 +114,9 @@ public class AdminMapperTests {
 	}
 	*/
 	
-	/* 이미지 등록 */
+	
+	/*
+	// 이미지 등록 
 	@Test
 	public void imageEnrollTest() {
 		AttachImageVO vo = new AttachImageVO();
@@ -126,7 +128,23 @@ public class AdminMapperTests {
 		
 		mapper.imageEnroll(vo);
 	}
+	*/
 	
+	/*
+	// 지정 상품 이미지 삭제
+	@Test
+	public void deleteImageAllTest() {
+		int bookId=23;
+		
+		mapper.deleteImageAll(bookId);
+	}
+	*/
+	
+	// 어제자 날짜 이미지 리스트
+	@Test
+	public void checkImageListTest() {
+		mapper.checkFileList();
+	}
 	
 	
 	
