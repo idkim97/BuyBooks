@@ -45,7 +45,14 @@
 				</div>
 
 				<div class="search_area">
-					<h1>Search area</h1>
+					<div class="search_wrap">
+						<form id="searchForm" action="/search" method="get">
+							<div class="search_input">
+								<input type="text" name="keyword">
+								<button class='btn search_btn'>검 색</button>
+							</div>
+						</form>
+					</div>
 				</div>
 
 				<div class="login_area">
