@@ -7,16 +7,36 @@
 
 	<!-- criteria(검색조건) -->
 	<sql id="criteria">
-		<if test="keyword != null">
-			where (bookName like concat ('%', #{keyword}, '%'))
-		</if>
+		<trim prefix="where (" suffix=")" prefixOverrides="AND">
+			<foreach item="type" collection="typeArr">
+	  			<trim prefix="AND">
+	  				<choose>
+	  					<when test="type == 'A'.toString()">
+	  						<trim prefixOverrides="or">
+			  					<foreach collection="authorArr" item="authorId">
+			  						<trim prefix="or">
+			  							a.authorId = #{authorId}
+			  						</trim>
+			  					</foreach>  						
+	  						</trim>
+	  					</when>
+	  					<when test="type == 'C'.toString()">
+	  						a.cateCode like concat ('%', #{cateCode}, '%')
+	  					</when>  					
+	  					<when test="type == 'T'.toString()">
+	  						bookName like concat ('%', #{keyword}, '%')
+	  					</when>  					
+	  				</choose>
+	  			</trim>
+	  		</foreach>
+		</trim>
 	</sql>
 
 	<!-- 상품 검색 -->
 	<select id="getGoodsList" resultType="com.vam.model.BookVO">
 
 		select bookId, bookName, b.authorName, a.authorId, c.cateName,
-		a.cateCode, publisher, publeYear, bookPrice
+		a.cateCode, publisher, publeYear, bookPrice, bookDiscount
 		from vam_book a left outer join vam_author b on a.authorId = b.authorId
 		left outer join vam_bcate c on a.cateCode = c.cateCode
 		<include refid="criteria"></include>
@@ -28,7 +48,7 @@
 	<!-- 상품 총 개수 -->
 	<select id="goodsGetTotal" resultType="int">
 
-		select count(*) from vam_book
+		select count(*) from vam_book a
 
 		<include refid="criteria"></include>
 
