@@ -99,8 +99,7 @@ a{
 /* 홈페이지 메인 제품 목록  */
 .content_area{
 	width: 100%;
-    background-color: #97ef97;
-    height: 1000px;
+    min-height: 1000px;
 }
 
 /* 로그인 성공 영역 */
@@ -194,6 +193,41 @@ a{
     margin-top : 30px;
 } 
 
+/* 검색 박스 영역*/
+.search_wrap{
+	width: 100%;
+    height: 100%;
+}
+#searchForm{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_input{
+    display: flex;
+    height: 30%;
+    width: 80%;	
+}
+.search_input select{
+	width: 20%;
+    text-align: center;
+    font-size: 15px;	
+}
+.search_input input{
+    margin-left: 10px;
+    width: 57%;	
+    font-size: 18px;
+    padding-left: 2%;
+}
+.search_btn{
+	margin-left: 10px;
+    width: 17%;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 600;	
+}
 
 
 /* float 속성 해제 */
