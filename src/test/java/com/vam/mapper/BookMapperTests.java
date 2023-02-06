@@ -36,6 +36,7 @@ public class BookMapperTests {
 	}
 	*/
 	
+	/*
 	// 작가 id 리스트 요청 
 	@Test
 	public void getAuthorId() {
@@ -51,5 +52,63 @@ public class BookMapperTests {
 		}
 		
 		
+	}
+	*/
+	
+	@Test
+	public void getGoodsListTest1() {
+		Criteria cri = new Criteria();
+		String type = "A";
+		String keyword = "김난도";
+		//String keyword = "없음"
+		String catecode = "";
+		
+		cri.setType(type);
+		cri.setKeyword(keyword);
+		cri.setAuthorArr(mapper.getAuthorIdList(keyword));
+		cri.setCateCode(catecode);
+		
+		List<BookVO> list = mapper.getGoodsList(cri);
+		
+		System.out.println("cri : " + cri );
+		System.out.println("list : " + list);
+	}
+	
+	@Test
+	public void getGoodsListTest2() {
+		Criteria cri = new Criteria();
+		String type = "T";
+		String keyword = "테스트";
+		//String keyword = "없음"
+		String catecode = "";
+		
+		cri.setType(type);
+		cri.setKeyword(keyword);
+		cri.setAuthorArr(mapper.getAuthorIdList(keyword));
+		cri.setCateCode(catecode);
+		
+		List<BookVO> list = mapper.getGoodsList(cri);
+		
+		System.out.println("cri : " + cri );
+		System.out.println("list : " + list);
+	}
+	
+	@Test
+	public void getGoodsListTest3() {
+		Criteria cri = new Criteria();
+		String type = "C";
+		String keyword = "테스트";
+		//String keyword = "없음"
+		String catecode = "103000";
+		
+		cri.setType(type);
+		cri.setKeyword(keyword);
+		cri.setAuthorArr(mapper.getAuthorIdList(keyword));
+		cri.setCateCode(catecode);
+		
+		List<BookVO> list = mapper.getGoodsList(cri);
+		
+		System.out.println("cri : " + cri );
+		System.out.println("list : " + list);
 	}
 }
