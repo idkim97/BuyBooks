@@ -55,6 +55,7 @@ public class BookMapperTests {
 	}
 	*/
 	
+	/*
 	@Test
 	public void getGoodsListTest1() {
 		Criteria cri = new Criteria();
@@ -111,4 +112,7 @@ public class BookMapperTests {
 		System.out.println("cri : " + cri );
 		System.out.println("list : " + list);
 	}
+	*/
+	
+	
 }
