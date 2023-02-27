@@ -99,6 +99,8 @@
   				</choose>
   		</foreach>
 	
+	<!-- select distinct cateCode from vam_book where authorId = #{authorId} OR orauthorId = #{authorId}... -->
+	<!-- select distinct cateCode from vam_book where select distinct cateCode from vam_book where -->
 	</select>
 	
 	<!-- 카테고리 정보(+검색대상 갯수) -->		
@@ -140,6 +142,18 @@
   		</foreach>
 	
 	</select>
+	
+	<!-- 
+	select DISTINCT count(*) cateCount, a.cateCode,b.cateName 
+	from vam_book a left join vam_bcate b on a.cateCode = b.cateCode
+	where (authorId = #{authorId or authorId = #{authorId...)
+	and a.cateCode = #{cateCode}
+
+	select DISTINCT count(*) cateCount, a.cateCode,b.cateName 
+	from vam_book a left join vam_bcate b on a.cateCode = b.cateCode
+	where bookName like '%' || #{keyword} || '%' 
+	and a.cateCode = #{cateCode}
+	 -->
 
 
 </mapper>
