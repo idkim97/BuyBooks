@@ -37,7 +37,7 @@ public class BookServiceTests {
 		Criteria cri = new Criteria();
 	
 		String type = "AC";
-		String keyword = "유홍준";	
+		String keyword = "테스트";	
 		//String keyword = "머스크";	
 		String cateCode = "103002";
 
@@ -71,7 +71,7 @@ public class BookServiceTests {
 	
 		String type = "AC";
 		//String keyword = "유홍준";	
-		String keyword = "머스크";	
+		String keyword = "테스트";	
 		
 
 		cri.setType(type);
