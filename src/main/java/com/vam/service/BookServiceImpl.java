@@ -84,6 +84,7 @@ public class BookServiceImpl implements BookService{
 		return bookMapper.getCateCode2();
 	}
 
+	// 검색결과 카테고리 필터 정보
 	@Override
 	public List<CateFilterDTO> getCateInfoList(Criteria cri) {
 		
