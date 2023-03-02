@@ -136,7 +136,9 @@
 											[${list.cateName}]
 										</div>
 										<div class="title">
-											${list.bookName}
+											<a href="/goodsDetail/${list.bookId}">
+												${list.bookName}
+											</a>
 										</div>
 										<div class="author">
 											${list.authorName} 지음 | ${list.publisher} | ${list.publeYear}
