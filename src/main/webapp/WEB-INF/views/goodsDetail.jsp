@@ -33,7 +33,7 @@
 						</c:if>
 						<li><a id="gnb_logout_button">로그아웃</a></li>
 						<li>마이룸</li>
-						<li>장바구니</li>
+						<li><a href="/cart/${member.memberId}">장바구니</a></li>
 					</c:if>
 					
 				</ul>
@@ -121,6 +121,9 @@
 									value="${goodsInfo.bookPrice*goodsInfo.bookDiscount}"
 									pattern="#,### 원" />
 								할인]
+							</div>
+							<div>
+								적립 포인트 : <span class = "point_span"></span>원
 							</div>
 						</div>
 						<div class="line"></div>
@@ -215,6 +218,12 @@
 		let publeYear = yearArray[0] + "년 " + yearArray[1] + "월 " + yearArray[2] + "일";
 		
 		$(".publeyear").html(publeYear);
+		
+		/* 포인트 삽입 */
+		let salePrice = "${goodsInfo.bookPrice - (goodsInfo.bookPrice*goodsInfo.bookDiscount)}"
+		let point = salePrice*0.05;
+		point = Math.floor(point);
+		$(".point_span").text(point);
 	});
 	
 	// 장바구니 수량 버튼 조작
