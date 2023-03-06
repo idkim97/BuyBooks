@@ -30,4 +30,9 @@ public class MemberServiceImpl implements MemberService {
 	public MemberVO memberLogin(MemberVO member) throws Exception {
 		return memberMapper.memberLogin(member);
 	}
+	
+	// 주문자 정보
+	public MemberVO getMemberInfo(String memberId) {
+		return memberMapper.getMemberInfo(memberId);
+	}
 }
