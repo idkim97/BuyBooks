@@ -1,5 +1,7 @@
 package com.vam.model;
 
+import java.util.List;
+
 public class OrderPageItemDTO {
 
 	// 뷰로부터 전달받을 값 
@@ -22,6 +24,10 @@ public class OrderPageItemDTO {
     private int point;
     
     private int totalPoint;
+    
+    
+    // 상품 이미지 
+	private List<AttachImageVO> imageList;
 
 	public int getBookId() {
 		return bookId;
@@ -94,8 +100,16 @@ public class OrderPageItemDTO {
 	public void setTotalPoint(int totalPoint) {
 		this.totalPoint = totalPoint;
 	}
-    
+	 
 	
+	public List<AttachImageVO> getImageList() {
+		return imageList;
+	}
+
+	public void setImageList(List<AttachImageVO> imageList) {
+		this.imageList = imageList;
+	}
+
 	public void initSaleTotal() {
 		this.salePrice = (int) (this.bookPrice * (1-this.bookDiscount));
 		this.totalPrice = this.salePrice*this.bookCount;
@@ -107,7 +121,8 @@ public class OrderPageItemDTO {
 	public String toString() {
 		return "OrderPageItemDTO [bookId=" + bookId + ", bookCount=" + bookCount + ", bookName=" + bookName
 				+ ", bookPrice=" + bookPrice + ", bookDiscount=" + bookDiscount + ", salePrice=" + salePrice
-				+ ", totalPrice=" + totalPrice + ", point=" + point + ", totalPoint=" + totalPoint + "]";
+				+ ", totalPrice=" + totalPrice + ", point=" + point + ", totalPoint=" + totalPoint + ", imageList="
+				+ imageList + "]";
 	}
     
 }
