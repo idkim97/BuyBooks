@@ -166,5 +166,23 @@
 	
 	</select>
 
+	<!-- 리뷰를 위한 상품 id -->
+	<select id="getBookIdName" resultType="com.vam.model.BookVO">
+
+		select bookId, bookName from vam_book
+		where bookId = #{bookId}
+
+
+	</select>
+	
+	<select id="likeSelect" resultType="com.vam.model.SelectDTO">
+
+	select bookId, bookName, ratingAvg, (select cateName from vam_bcate
+	where vam_book.cateCode = vam_bcate.cateCode) as cateName
+	from vam_book
+	order by ratingAvg desc limit 8	
+	
+	</select>
+
 
 </mapper>
