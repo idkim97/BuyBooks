@@ -4,8 +4,8 @@
 > **Spring 기반 온라인 책 쇼핑몰 웹 페이지 입니다.**
 
 <p align="center">
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bb1.png?raw=true" align="left" width="35%">
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bb2.png?raw=true" align="center" width="35%" height="390">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bb1.png?raw=true" align="left" width="40%" height="50%" >
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bb2.png?raw=true" align="center" width="40%" height="50%">
 <figcaption align="center"></figcaption>
 </p>
 <br>
