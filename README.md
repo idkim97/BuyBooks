@@ -1,8 +1,9 @@
 
 # 📕 BuyBooks 
 
-> **Spring 기반 온라인 책 쇼핑몰 웹 페이지 입니다. 
-> MVC 패턴, HTTP 프로토콜 등 Backend 로직을 중점으로 설계한 프로젝트 입니다.** 
+> **Spring 기반 온라인 책 쇼핑몰 웹 페이지 입니다.**
+> 
+> **MVC 패턴, HTTP 프로토콜 등 Backend 로직을 중점으로 설계한 프로젝트 입니다.** 
 
 <br><br>
 
@@ -120,3 +121,23 @@
 - vam_cart : 장바구니 정보 테이블
 - book_member : 회원 정보 테이블
 - vam_reply : 댓글 정보 테이블
+
+
+## 📜 API ( GitBook 활용 )
+
+**📄 API 문서 주소** : [BuyBooks API](https://kims-organization-2.gitbook.io/buybooks-api/)
+
+<br>
+
+<p align="center">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi4.png?raw=true" align="left" width="40%" height="50%" >
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi2.png?raw=true" align="center" width="40%" height="320">
+<figcaption align="center"></figcaption>
+</p>
+<br>
+<p align="center">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi3.png?raw=true" align="left" width="40%" height="50%" >
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi1.png?raw=true" align="center" width="40%" height="50%">
+<figcaption align="center"></figcaption>
+</p>
+<br>
