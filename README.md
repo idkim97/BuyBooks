@@ -126,22 +126,28 @@
 - book_member : 회원 정보 테이블
 - vam_reply : 댓글 정보 테이블
 
+<br><br>
 
 ## 📜 API ( GitBook 활용 )
 
-**📄 API 문서 주소** : [BuyBooks API](https://kims-organization-2.gitbook.io/buybooks-api/)
+### 📄 API 문서 주소 : [BuyBooks API](https://kims-organization-2.gitbook.io/buybooks-api/)
 
 <br>
 
-<p align="center">
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi4.png?raw=true" align="left" width="40%" height="50%" >
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi2.png?raw=true" align="center" width="40%" height="270">
-<figcaption align="center"></figcaption>
+**🛒 장바구니 API**
+<p align="left">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi2.png?raw=true" width="65%" height="65%">
 </p>
 <br>
-<p align="center">
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi3.png?raw=true" align="left" width="40%" height="50%" >
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi1.png?raw=true" align="center" width="40%" height="50%">
-<figcaption align="center"></figcaption>
+
+**☝ 댓글 API**
+<p align="left">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi3.png?raw=true" width="65%" height="65%">
 </p>
+
 <br>
+
+**💻 관리자 API**
+<p align="left">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi1.png?raw=true" width="65%" height="65%">
+</p>
