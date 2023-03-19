@@ -48,6 +48,8 @@
 	- 상품 리뷰
 	- DB Batch Program 적용
 
+<br><br>
+
 ## 📜 프로젝트 구성도
 📦src  
  ┣ 📂main  
@@ -106,6 +108,8 @@
  ┃ ┗ 📂resources  
  ┃ ┃ ┗ 📜log4j.xml  
 
+<br><br>
+
 ## 📜 DB 구조도
 <p align="left">
 <img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/BuyBooks_DB.png?raw=true">
@@ -131,7 +135,7 @@
 
 <p align="center">
 <img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi4.png?raw=true" align="left" width="40%" height="50%" >
-<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi2.png?raw=true" align="center" width="40%" height="320">
+<img src="https://github.com/idkim97/idkim97.github.io/blob/master/img/bbapi2.png?raw=true" align="center" width="40%" height="270">
 <figcaption align="center"></figcaption>
 </p>
 <br>
