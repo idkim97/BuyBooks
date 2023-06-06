@@ -144,8 +144,15 @@
 				</div>
 				<div class="line"></div>
 				<div class="content_middle">
-					<div class="book_intro">${goodsInfo.bookIntro}</div>
-					<div class="book_content">${goodsInfo.bookContents }</div>
+					<div class="book_intro">
+						<div class = "book_intro_title">책 소개</div><br><br>
+						${goodsInfo.bookIntro} <br><br>
+					</div>
+					<div class="line"></div>
+					<div class="book_content">
+						<div class = "book_content_title">목차</div><br><br>
+						${goodsInfo.bookContents }
+					</div>
 				</div>
 				<div class="line"></div>
 				<div class="content_bottom">
