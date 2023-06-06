@@ -52,8 +52,9 @@ a {
 }
 
 .logo_area img {
-	width: 100%;
+	width: 80%;
 	height: 100%;
+	margin-left: 15px;
 }
 
 /* 검색 박스 영역 */
@@ -292,10 +293,10 @@ a {
 }
 
 .footer_left>img {
-	width: 150%;
-	height: 130px;
-	margin-left: -20px;
-	margin-top: -12px;
+	width: 120%;
+    height: 130px;
+    margin-left: 15px;
+    margin-top: -12px;
 }
 
 .footer_left {
@@ -441,11 +442,21 @@ a {
 	margin-top: 40px;
 }
 
+.book_intro_title {
+	font-weight: bold;
+	font-size: 25px;
+}
+
 .book_content {
 	width: 80%;
 	margin: auto;
 	margin-top: 40px;
 	margin-bottom: 40px;
+}
+
+.book_content_title {
+	font-weight: bold;
+	font-size: 25px;
 }
 
 /*
