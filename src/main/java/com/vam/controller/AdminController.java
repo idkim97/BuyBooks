@@ -45,6 +45,10 @@ import com.vam.service.AdminService;
 import com.vam.service.AuthorService;
 import com.vam.service.OrderService;
 
+
+
+
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -61,6 +65,7 @@ public class AdminController {
 	private OrderService orderService;
 	
 	// 관리자 메인 페이지로 이동
+	
 	@RequestMapping(value="main", method=RequestMethod.GET)
 	public void adminMainGET() throws Exception{
 		
