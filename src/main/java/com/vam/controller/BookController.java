@@ -59,7 +59,8 @@ public class BookController {
 	@GetMapping("/display")
 	public ResponseEntity<byte[]> getImage(String fileName){
 		logger.info("getImage()........." + fileName);
-		File file = new File("C:\\Users\\user\\Desktop\\Yeoun Su\\github\\ShoppingMall_Spring\\upload\\" + fileName);
+//		File file = new File("C:\\Users\\user\\Desktop\\Yeoun Su\\github\\ShoppingMall_Spring\\upload\\" + fileName);
+		File file = new File("C:\\Users\\idkim\\OneDrive\\Desktop\\YeounSu\\github\\BuyBooks\\upload\\" + fileName);
 		ResponseEntity<byte[]> result = null;
 		
 		try {
