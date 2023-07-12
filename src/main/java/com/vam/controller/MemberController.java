@@ -22,7 +22,7 @@ import com.vam.model.MemberVO;
 import com.vam.service.MemberService;
 
 @Controller
-@RequestMapping(value = "/member")
+@RequestMapping(value = "/member") // /member URL로 넘어오는 애들은 전부 여기서 처리하겠다.
 public class MemberController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
